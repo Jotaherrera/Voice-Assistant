@@ -63,7 +63,7 @@ namespace F.R.I.D.A.Y
                 switch (speech)
                 {
                     case "Hola Viernes":
-                        Viernes.SpeakAsync("Hola Juan José" + "....");
+                        Viernes.SpeakAsync("Hola usuario" + "....");
                         lblRecognizer.Text = "";
                         lblRecognizer.Text = speech;
                         break;
@@ -81,7 +81,7 @@ namespace F.R.I.D.A.Y
                         ranNum = rnd.Next(1, 2);
                         if (ranNum == 1)
                         {
-                            Viernes.SpeakAsync("Si, Señor Juan" + "......");
+                            Viernes.SpeakAsync("Si, Señor usuario" + "......");
                             lblRecognizer.Text = "";
                             lblRecognizer.Text = speech;
                         }
@@ -100,13 +100,6 @@ namespace F.R.I.D.A.Y
                         _recognizer.RecognizeAsyncCancel();
                         startListening.RecognizeAsync(RecognizeMode.Multiple);
                         break;
-                    case "Pon mi canción favorita":
-                        Viernes.SpeakAsync("Colocando Purrito apa" + "......");
-                        Process.Start(@"C:\Program Files\Google\Chrome\Application\chrome.exe", "https://www.youtube.com/watch?v=x4rMUIXoyhE&ab_channel=FeidVEVO");
-                        lblRecognizer.Text = "";
-                        lblRecognizer.Text = speech;
-                        break;
-
                     default:
                         break;
                 }
@@ -125,7 +118,7 @@ namespace F.R.I.D.A.Y
             {
                 case "Despierta":
                     startListening.RecognizeAsyncCancel();
-                    Viernes.SpeakAsync("¿Si? Señor Juan");
+                    Viernes.SpeakAsync("¿Si? Señor");
                     _recognizer.RecognizeAsync(RecognizeMode.Multiple);
                     lblRecognizer.Text = "";
                     lblRecognizer.Text = speech;
