@@ -1,0 +1,9 @@
+﻿Hi assistant
+How are you?
+What time is it?
+Wake up
+Stop talking
+Stop listening
+Show commands
+Hide commands
+Play my favorite song
